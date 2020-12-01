@@ -22,7 +22,7 @@ public class ProductService {
         if(ProductUtils.isNumber(param)){
             return productsToProductResponse.mapper(productsRepository.getProductById(Integer.parseInt(param)));
         }else {
-            return productsToProductResponse.mapper(productsRepository.findProductsByCriteria(param, PageRequest.of(page, 15)));
+            return productsToProductResponse.mapper(productsRepository.findProductsByCriteria(param, PageRequest.of(page, 20)));
         }
     }
 
